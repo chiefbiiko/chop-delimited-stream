@@ -1,0 +1,28 @@
+{
+  "name": "chop-delimited-stream",
+  "version": "0.0.0",
+  "description": "chop a buffer stream by a buffer delimiter",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiefbiiko/chop-delimited-stream.git"
+  },
+  "keywords": [
+    "chop",
+    "stream",
+    "buffer",
+    "delimiter"
+  ],
+  "author": "Noah Anabiik Schwarz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiefbiiko/chop-delimited-stream/issues"
+  },
+  "homepage": "https://github.com/chiefbiiko/chop-delimited-stream#readme",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
