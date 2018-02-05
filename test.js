@@ -2,10 +2,10 @@ var passthru = require('stream').PassThrough
 var tape = require('tape')
 var chop = require('./index')
 
-var x040109 = Buffer.from([ 0x00, 0x04, 0x01, 0x09, 0x04, 0x01, 0x09, 0x00 ])
+var BUF419 = Buffer.from([ 0x00, 0x04, 0x01, 0x09, 0x04, 0x01, 0x09, 0x00 ])
 
 tape('default delimiter is 419', function (t) {
-  t.true(chop.DEFAULT_DELIMITER.equals(x040109), 'default 419')
+  t.true(chop.DEFAULT_DELIMITER.equals(BUF419), 'default 419')
   t.end()
 })
 
@@ -17,7 +17,7 @@ tape('chops', function (t) {
   var expected = [ 'chop', 'this', 'buffer', 'up' ]
 
   var input = expected.map(function (piece, i) {
-    return Buffer.concat([ Buffer.from(piece), x040109 ])
+    return Buffer.concat([ Buffer.from(piece), BUF419 ])
   })
 
   function ondata (chunk) {
