@@ -32,9 +32,9 @@ Chop.prototype._transform = function transform (chunk, _, next) {
   }
 }
 
-Chop.prototype._final = function final (finish) {
+Chop.prototype._flush = function flush (end) {
   if (this._trailing && this._stash.length) this.push(this._stash)
-  finish()
+  end()
 }
 
 module.exports = Chop
