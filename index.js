@@ -26,7 +26,10 @@ Chop.prototype._transform = function transform (chunk, _, next) {
       this._stash = ZBUF0
       head = i + this._delimiter.length
     } else if (i === tail) {
-      this._stash = chunk.slice(head, chunk.length)
+      this._stash = Buffer.concat([
+        this._stash,
+        chunk.slice(head, chunk.length)
+      ])
       next()
     }
   }
